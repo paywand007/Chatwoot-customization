@@ -32,10 +32,9 @@ Update the `sendMessage` action in the `action.js` file to include a check for p
       dispatch('sendMessageWithData', message);
     }
   },
-  # ... other actions and methods ...
-  ## Frontend Customization - Part 2
+```
 
-### 1. Frontend Configuration
+### 1. Frontend Configuration : Another way
 
 #### File Path: `/chatwoot/app/javascript/widget/api/endPoints.js`
 
