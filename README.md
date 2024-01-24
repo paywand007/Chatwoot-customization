@@ -75,8 +75,8 @@ const sendMessage = (content, replyTo) => {
   };
 };
 
-// ... other actions and methods ...
-## Backend Customization for User & Agent Messages
+```
+# Backend Customization for User & Agent Messages
 
 ### 1. Backend Configuration for User Messages
 
@@ -106,7 +106,7 @@ class Api::V1::Widget::MessagesController < Api::V1::Widget::BaseController
 
   # ... other private methods ...
 end
- 
+ ```
 
 ## Backend Configuration for Agent Messages
 
@@ -136,7 +136,7 @@ class Api::V1::Accounts::Conversations::MessagesController < Api::V1::Accounts::
 end
 
 # ... other actions and methods ...
-
-changing logs
+```
+## changing logs
 You can change logo by changing image inside the codebase. files located under app/public/brand-assets folder. and also change the name logo inside /home/chatwoot/chatwoot/config/installation_config.yml
 
