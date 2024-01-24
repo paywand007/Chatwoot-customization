@@ -9,10 +9,10 @@ This customization aims to enhance Chatwoot by preventing the sending and storin
 ## Frontend Customization
 
 ### 1. Frontend Configuration
-
+ ## Frontend Customization - Part 1
 #### File Path: `/chatwoot/app/javascript/widget/store/modules/conversation/action.js`
 
-Update the `sendMessage` action in the `conversation.js` file to include a check for prohibited words. This check is performed before dispatching the message for sending.
+Update the `sendMessage` action in the `action.js` file to include a check for prohibited words. This check is performed before dispatching the message for sending.
 
 ```javascript
 
@@ -86,7 +86,7 @@ const sendMessage = (content, replyTo) => {
 In this customization, we modify the `MessagesController` under the Widget API to include a check for prohibited words before creating a new message in the conversation for user messages.
 
 ```ruby
-# ... other actions and methods ...
+ 
 
 class Api::V1::Widget::MessagesController < Api::V1::Widget::BaseController
   before_action :set_conversation, only: [:create]
@@ -107,8 +107,7 @@ class Api::V1::Widget::MessagesController < Api::V1::Widget::BaseController
 
   # ... other private methods ...
 end
-
-# ... other actions and methods ...
+ 
 
 ## Backend Configuration for Agent Messages
 
