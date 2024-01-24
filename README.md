@@ -10,7 +10,7 @@ This customization aims to enhance Chatwoot by preventing the sending and storin
 
 ### 1. Frontend Configuration
 
-#### File Path: `/chatwoot/app/javascript/widget/store/modules/conversation.js`
+#### File Path: `/chatwoot/app/javascript/widget/store/modules/conversation/action.js`
 
 Update the `sendMessage` action in the `conversation.js` file to include a check for prohibited words. This check is performed before dispatching the message for sending.
 
