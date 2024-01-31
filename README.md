@@ -18,7 +18,7 @@ Update the `sendMessage` action in the `action.js` file to include a check for p
 
 
   sendMessage: async ({ dispatch }, params) => {
-    const badPhrases = ['ugly', 'fuck you','fuck' ,'x']; 
+    const badPhrases = ['ugly', 'fuck you','fuck' ,'x','...']; 
 
     if (badPhrases.some(badPhrase => params.content.trim().toLowerCase().includes(badPhrase.toLowerCase()))) {
       console.log('Bad phrase detected. Message not sent.');
@@ -53,7 +53,7 @@ In this part of the customization, we modify the `sendMessage` function in the `
 const sendMessage = (content, replyTo) => {
   const referrerURL = window.referrerURL || '';
   const search = buildSearchParamsWithLocale(window.location.search);
-  const badWords = ['fuck', 'x', 'badword'];  
+  const badWords = ['fuck', 'x', 'badword','...'];  
   const containsBadWord = badWords.some(badWord => content.toLowerCase().trim().includes(badWord.toLowerCase()));
 
   if (containsBadWord) {
@@ -97,7 +97,7 @@ class Api::V1::Widget::MessagesController < Api::V1::Widget::BaseController
   private
 
   def check_prohibited_words
-    prohibited_words = ['fuck', 'ugly'] # Add your list of prohibited words here
+    prohibited_words = ['fuck', 'ugly','...'] # Add your list of prohibited words here
 
     if prohibited_words.any? { |word| params.dig(:message, :content).to_s.downcase.include?(word) }
       render json: { error: 'Message contains prohibited words' }, status: :unprocessable_entity
@@ -125,7 +125,7 @@ class Api::V1::Accounts::Conversations::MessagesController < Api::V1::Accounts::
   private
 
   def check_prohibited_words
-    prohibited_words = ['fuck', 'ugly'] # Add your list of prohibited words here
+    prohibited_words = ['fuck', 'ugly','...'] # Add your list of prohibited words here
 
     if prohibited_words.any? { |word| params.dig(:message, :content).to_s.downcase.include?(word) }
       render json: { error: 'Message contains prohibited words' }, status: :unprocessable_entity
